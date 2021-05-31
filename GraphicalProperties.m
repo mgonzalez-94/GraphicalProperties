@@ -29,5 +29,6 @@ GraphProp.Legend.ColorData    = uint8(255*[1;1;1;.9]);
 % set(Ax1.XLabel,GraphProp.PropXL);
 % set(Ax1.YLabel,GraphProp.PropYL);
 %%% Legend
-% set(lgn1.BoxFace, 'ColorType','truecoloralpha', 'ColorData',uint8(255*[1;1;1;.9]));
+% set(lgn.BoxFace, 'ColorType','truecoloralpha', 'ColorData',uint8(255*[1;1;1;.9]));
+% set(lgn,'FontSize',GraphProp.fontsize-2,'Location','best');
 end
