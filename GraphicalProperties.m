@@ -19,10 +19,15 @@ GraphProp.PropYA.Color        = [1 1 1]*0;
 GraphProp.PropXA.Color        = [1 1 1]*0;
 GraphProp.PropT.FontName      = GraphProp.fontname;
 GraphProp.PropT.FontSize      = GraphProp.fontsize;
+GraphProp.Legend.ColorType    = 'truecoloralpha';
+GraphProp.Legend.ColorData    = uint8(255*[1;1;1;.9]);
+%%% Plot
 % set(Ax1,GraphProp.Prop);
 % set(Ax1.XAxis,GraphProp.PropXA);
 % set(Ax1.YAxis,GraphProp.PropYA);
 % set(Ax1.Title,GraphProp.PropT);
 % set(Ax1.XLabel,GraphProp.PropXL);
 % set(Ax1.YLabel,GraphProp.PropYL);
+%%% Legend
+% set(lgn1.BoxFace, 'ColorType','truecoloralpha', 'ColorData',uint8(255*[1;1;1;.9]));
 end
