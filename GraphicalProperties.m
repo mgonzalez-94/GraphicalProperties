@@ -1,7 +1,37 @@
-function GraphProp = GraphicalProperties
-GraphProp.fontname            = 'Calibri Light';
-GraphProp.fontsize            = 11;
-GraphProp.linewidth           = 1.2;
+function GraphProp = GraphicalProperties(varargin)
+% 
+% GraphicalProperties
+% 
+% INPUTS:
+%   FontName
+%   FontSize
+%   LineWidth
+% 
+% Created By:
+%   Mateo G. H. (2021-03-06)
+
+%%%
+if nargin>0
+    FontName = varargin{1};
+else
+    FontName = 'Calibri Light';
+end
+%%%
+if nargin>1
+    FontSize = varargin{2};
+else
+    FontSize = 10;
+end
+%%%
+if nargin>2
+    LineWidth = varargin{3};
+else
+    LineWidth = 1.2;
+end
+%%%
+GraphProp.fontname            = FontName;
+GraphProp.fontsize            = FontSize;
+GraphProp.linewidth           = LineWidth;
 GraphProp.Prop.FontName       = GraphProp.fontname;
 GraphProp.Prop.FontSize       = GraphProp.fontsize;
 GraphProp.PropYL.FontName     = GraphProp.fontname;
@@ -29,6 +59,5 @@ GraphProp.Legend.ColorData    = uint8(255*[1;1;1;.9]);
 % set(Ax1.XLabel,GraphProp.PropXL);
 % set(Ax1.YLabel,GraphProp.PropYL);
 %%% Legend
-% set(lgn.BoxFace, 'ColorType','truecoloralpha', 'ColorData',uint8(255*[1;1;1;.9]));
-% set(lgn,'FontSize',GraphProp.fontsize-2,'Location','best');
+% set(lgn1.BoxFace, 'ColorType','truecoloralpha', 'ColorData',uint8(255*[1;1;1;.9]));
 end
